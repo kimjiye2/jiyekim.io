@@ -203,7 +203,7 @@
     .selected-pubs {
       display: grid;
       gap: 24px;
-      background-color: #ffffff;
+      /*background-color: #ffffff;*/
     }
 
     .edu-list {
@@ -266,14 +266,15 @@
       display: grid;
       grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
       gap: 28px;
-      background-color: #ffffff;
-      padding: 24px 0;
-      border-bottom: 1px solid rgba(231, 235, 240, 0.95);
+      background-color: #ffffff;   /* 카드 자체는 흰색 유지 */
+      padding: 24px;                /* 카드 내부 여백, 흰 배경이 카드 형태로 보이게 */
+      border-radius: 12px;         /* 선택사항: 카드처럼 둥근 모서리 */
+      border-bottom: none;         /* 구분선은 이제 gap이 대신하므로 제거 */
       align-items: stretch;
     }
-
+        
     .pub-card:first-child {
-      border-top: 1px solid rgba(231, 235, 240, 0.95);
+      border-top: none;
     }
 
     .pub-figure {
